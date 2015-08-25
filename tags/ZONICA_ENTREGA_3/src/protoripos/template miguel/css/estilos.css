@@ -1,0 +1,212 @@
+html { 
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	margin: 0;
+	font-size:62.5%;
+	font-family: Arial, sans-serif;
+	background-color: #F9F9F9;
+	text-align: center;
+	color: #565656;
+}
+
+/* ============ TAGS GLOBALES ============ */
+
+img {
+	border: 0px;
+}
+
+ul, ol, li, dl, dt, dd {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+a { text-decoration: none; }
+
+h1,h2,h3,h4,h5,h6 {
+	padding: 0;
+	margin: 0;
+}
+
+form,fieldset,label,input {
+	padding: 0;
+	margin: 0;
+}
+
+fieldset {border: 0;}
+
+p {margin: 1em 0;}
+
+.hidden {display: none;}
+
+.clear {clear: both;}
+
+
+/* ============ ORGANIZACION ESTRUCTURAL ============ */
+
+#wrapper {
+	background: #fff url(../images/wrapper-fondo.png) repeat-y;
+	width: 750px;
+	margin: 15px auto;
+	text-align: left;
+	overflow:hidden;
+}
+	#top {
+		width: 750px;
+		background: url(../images/top-header.png) no-repeat;
+		height: 58px;
+		overflow: hidden;
+	}
+	h1 {
+		font-size: 2em;
+		color: #fff;
+		float: left;
+		margin: 1.1em 0 0 1em;
+	}
+	h2 {
+		font-size: 1.6em;
+		color: #fff;
+		float: right;
+		margin: 1.6em 2em 0 0;
+	}
+	
+	#menu {
+		float: left;
+		margin: 10px 0 0 10px;
+	}
+		#menu li {
+			display: block;
+			width: 156px;
+			height: 36px;
+			background: url(../images/boton-fondo.png) no-repeat;
+			overflow: hidden;
+		}
+			#menu li a {
+				display: block;
+				width: 156px;
+				height: 36px;
+				line-height: 36px;
+				text-align: center;
+				color: #fff;
+				background: url(../images/boton-fondo.png) no-repeat;
+				font-weight: bold;
+				font-size: 1.3em;
+			}
+				#menu li a:hover {
+					background-position: 0 -36px;
+					color: #000;
+				}
+	#contenido {
+		float: left;
+		overflow: hidden;
+		width: 550px;
+		border-left: 1px solid #ccc;
+		margin: 10px 0 0 10px;
+		padding: 0 10px;
+		font-size: 1.2em;
+		font-family: "Trebuchet MS", sans-serif;
+	}
+		#contenido h3 {
+			font-size: 1.33em;
+			color: #fff;
+			background-color: #959595;
+			padding: 2px 5px;
+			margin: 0 0 0.6em 0;
+			font-family: Arial, sans-serif;
+		}
+		#contenido a {	text-decoration: underline;	color: #565656; }
+		#contenido a:hover {background-color: #565656;  color: #fff;}
+		
+		.login {}
+			.login fieldset {
+				background-color: #F9F9F9;
+				border: 3px solid #ccc;
+				padding: 1em;
+				width: 285px;
+				margin: 1em auto;
+				overflow: hidden;
+			}
+			.login legend {display: none;}
+			.login label {
+				font-weight: bold;
+				display: block;
+				float: left;
+				width: 80px;
+				clear: left;
+				padding-top: 3px;
+			}
+			.login .nombre, .login .pass {
+				margin-bottom: 0.5em;
+				padding: 2px;
+				border-width: 2px;
+				width: 150px;
+			}
+			.login .submit {
+				padding: 2px;
+				margin: 5px auto 0 auto;
+				/*float: left;*/
+			}
+			
+		.thickBorder {}
+			.thickBorder fieldset {
+					background-color: #F9F9F9;
+					border: 3px solid #ccc;
+					padding: 1em;
+					margin: 1em auto;
+					overflow: hidden;
+				}
+			.thickBorder label {
+				font-weight:bold;
+				display: block;
+				float: left;
+				width: 120px;
+				clear: left;
+				padding-top: 3px;
+			}
+			
+			.thickBorder input, .thickBorder select
+			{
+				width: 150px;
+				margin: 5px auto 0 auto;
+			}
+			.thickBorder .button
+			{
+				width: auto;
+				padding: 2px;
+				margin: 5px auto 0 auto;
+			}
+			
+	div.rating
+		{
+			padding:5px 10px;
+			border-style:solid;
+			border-width:2px;
+			width:250px;
+			height:auto;
+			margin-right:5px;
+			margin-bottom:5px;
+			display:inline;
+		}
+		.rating a
+		{
+			width:100%;
+		}
+		
+		.rating table
+		{
+			width:100%;
+		}
+
+	#pie-wrapper {
+		clear: both;
+		height: 20px;
+		background: url(../images/pie.png) no-repeat 0 bottom;
+	}
+	
+	#pie {
+		font-family: "Trebuchet MS", sans-serif;
+		font-size: 1.1em;
+	}

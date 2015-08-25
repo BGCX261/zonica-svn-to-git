@@ -1,0 +1,106 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zonica.DAO", "Zonica.DAO\Zonica.DAO.csproj", "{E256825E-3D57-4CDC-A644-21241EB9E6F7}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zonica.Interfaces", "Zonica.Interfaces\Zonica.Interfaces.csproj", "{8F04BD48-3232-48D8-AE07-F452AE7E96C7}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zonica.Model", "Zonica.Model\Zonica.Model.csproj", "{6136FCA3-F73B-428E-A32F-8AC0EEE10A81}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zonica.Services", "Zonica.Services\Zonica.Services.csproj", "{C605D4B8-FB62-4DC7-B80A-02E46C16D00D}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zonica.Test.Environment", "Zonica.Test.Environment\Zonica.Test.Environment.csproj", "{C86AE8E0-4259-4A27-8419-1FF657B0480A}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zonica.Framework", "Zonica.Framework\Zonica.Framework.csproj", "{C7991ACC-8B86-4E25-86C3-BC2D8A2EB129}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zonica.Prebuild", "Zonica.Prebuild\Zonica.Prebuild.csproj", "{24A584E1-1C92-4DB2-89FB-5E4142EA2E7A}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zonica.Web.UI", "http://localhost/zonica/Zonica.Web.UI.csproj", "{AC31E485-28AF-4E7B-97AF-05C78FA0212F}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zonica.Exceptions", "Zonica.Exceptions\Zonica.Exceptions.csproj", "{D25ACDF3-C93C-483B-9EB2-656113445EFA}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zonica.Importer", "Zonica.Importer\Zonica.Importer.csproj", "{6F2994DB-849B-4F42-8687-3E823D714333}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{E256825E-3D57-4CDC-A644-21241EB9E6F7}.Debug.ActiveCfg = Debug|.NET
+		{E256825E-3D57-4CDC-A644-21241EB9E6F7}.Debug.Build.0 = Debug|.NET
+		{E256825E-3D57-4CDC-A644-21241EB9E6F7}.Release.ActiveCfg = Release|.NET
+		{E256825E-3D57-4CDC-A644-21241EB9E6F7}.Release.Build.0 = Release|.NET
+		{8F04BD48-3232-48D8-AE07-F452AE7E96C7}.Debug.ActiveCfg = Debug|.NET
+		{8F04BD48-3232-48D8-AE07-F452AE7E96C7}.Debug.Build.0 = Debug|.NET
+		{8F04BD48-3232-48D8-AE07-F452AE7E96C7}.Release.ActiveCfg = Release|.NET
+		{8F04BD48-3232-48D8-AE07-F452AE7E96C7}.Release.Build.0 = Release|.NET
+		{6136FCA3-F73B-428E-A32F-8AC0EEE10A81}.Debug.ActiveCfg = Debug|.NET
+		{6136FCA3-F73B-428E-A32F-8AC0EEE10A81}.Debug.Build.0 = Debug|.NET
+		{6136FCA3-F73B-428E-A32F-8AC0EEE10A81}.Release.ActiveCfg = Release|.NET
+		{6136FCA3-F73B-428E-A32F-8AC0EEE10A81}.Release.Build.0 = Release|.NET
+		{C605D4B8-FB62-4DC7-B80A-02E46C16D00D}.Debug.ActiveCfg = Debug|.NET
+		{C605D4B8-FB62-4DC7-B80A-02E46C16D00D}.Debug.Build.0 = Debug|.NET
+		{C605D4B8-FB62-4DC7-B80A-02E46C16D00D}.Release.ActiveCfg = Release|.NET
+		{C605D4B8-FB62-4DC7-B80A-02E46C16D00D}.Release.Build.0 = Release|.NET
+		{C86AE8E0-4259-4A27-8419-1FF657B0480A}.Debug.ActiveCfg = Debug|.NET
+		{C86AE8E0-4259-4A27-8419-1FF657B0480A}.Debug.Build.0 = Debug|.NET
+		{C86AE8E0-4259-4A27-8419-1FF657B0480A}.Release.ActiveCfg = Release|.NET
+		{C86AE8E0-4259-4A27-8419-1FF657B0480A}.Release.Build.0 = Release|.NET
+		{C7991ACC-8B86-4E25-86C3-BC2D8A2EB129}.Debug.ActiveCfg = Debug|.NET
+		{C7991ACC-8B86-4E25-86C3-BC2D8A2EB129}.Debug.Build.0 = Debug|.NET
+		{C7991ACC-8B86-4E25-86C3-BC2D8A2EB129}.Release.ActiveCfg = Release|.NET
+		{C7991ACC-8B86-4E25-86C3-BC2D8A2EB129}.Release.Build.0 = Release|.NET
+		{24A584E1-1C92-4DB2-89FB-5E4142EA2E7A}.Debug.ActiveCfg = Debug|.NET
+		{24A584E1-1C92-4DB2-89FB-5E4142EA2E7A}.Debug.Build.0 = Debug|.NET
+		{24A584E1-1C92-4DB2-89FB-5E4142EA2E7A}.Release.ActiveCfg = Release|.NET
+		{24A584E1-1C92-4DB2-89FB-5E4142EA2E7A}.Release.Build.0 = Release|.NET
+		{AC31E485-28AF-4E7B-97AF-05C78FA0212F}.Debug.ActiveCfg = Debug|.NET
+		{AC31E485-28AF-4E7B-97AF-05C78FA0212F}.Debug.Build.0 = Debug|.NET
+		{AC31E485-28AF-4E7B-97AF-05C78FA0212F}.Release.ActiveCfg = Release|.NET
+		{AC31E485-28AF-4E7B-97AF-05C78FA0212F}.Release.Build.0 = Release|.NET
+		{D25ACDF3-C93C-483B-9EB2-656113445EFA}.Debug.ActiveCfg = Debug|.NET
+		{D25ACDF3-C93C-483B-9EB2-656113445EFA}.Debug.Build.0 = Debug|.NET
+		{D25ACDF3-C93C-483B-9EB2-656113445EFA}.Release.ActiveCfg = Release|.NET
+		{D25ACDF3-C93C-483B-9EB2-656113445EFA}.Release.Build.0 = Release|.NET
+		{6F2994DB-849B-4F42-8687-3E823D714333}.Debug.ActiveCfg = Debug|.NET
+		{6F2994DB-849B-4F42-8687-3E823D714333}.Debug.Build.0 = Debug|.NET
+		{6F2994DB-849B-4F42-8687-3E823D714333}.Release.ActiveCfg = Release|.NET
+		{6F2994DB-849B-4F42-8687-3E823D714333}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(SolutionItems) = postSolution
+		ExternalAssemblies\antlr.runtime.dll = ExternalAssemblies\antlr.runtime.dll
+		ExternalAssemblies\Castle.DynamicProxy.dll = ExternalAssemblies\Castle.DynamicProxy.dll
+		ExternalAssemblies\Iesi.Collections.dll = ExternalAssemblies\Iesi.Collections.dll
+		ExternalAssemblies\log4net.dll = ExternalAssemblies\log4net.dll
+		ExternalAssemblies\NHibernate.dll = ExternalAssemblies\NHibernate.dll
+		README.txt = README.txt
+		ExternalAssemblies\Spring.Aop.dll = ExternalAssemblies\Spring.Aop.dll
+		ExternalAssemblies\Spring.Core.dll = ExternalAssemblies\Spring.Core.dll
+		ExternalAssemblies\Spring.Data.dll = ExternalAssemblies\Spring.Data.dll
+		ExternalAssemblies\Spring.Data.NHibernate.dll = ExternalAssemblies\Spring.Data.NHibernate.dll
+		ExternalAssemblies\Spring.Web.dll = ExternalAssemblies\Spring.Web.dll
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

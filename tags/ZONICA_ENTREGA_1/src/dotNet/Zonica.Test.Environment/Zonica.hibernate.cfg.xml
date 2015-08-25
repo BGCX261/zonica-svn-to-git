@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-configuration  xmlns="urn:nhibernate-configuration-2.0" >
+	<session-factory name="Zonica">
+
+		<!-- properties -->
+		<property name="use_outer_join">true</property>
+
+		<!-- mapping files -->
+		<mapping assembly="Zonica.Model"/>
+
+	</session-factory>
+</hibernate-configuration>

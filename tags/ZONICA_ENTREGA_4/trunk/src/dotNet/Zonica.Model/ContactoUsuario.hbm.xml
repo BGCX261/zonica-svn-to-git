@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.0"
+	namespace="Zonica.Model"
+	assembly="Zonica.Model"
+	default-access="field">
+
+	<class name="ContactoUsuario" table="ContactoUsuario">
+		<id name="id"
+			column="id"
+			unsaved-value="-1"
+			type="Int32">
+			<generator class="native" />
+		</id>
+
+		<property name="nombre"
+			column="nombre"
+			type="string"
+		/>
+
+		<many-to-one name="tipoContacto"
+			column="id_tipoContacto"
+			class="TipoContacto"
+			fetch="join"/>
+
+		<many-to-one
+			name="usuario"
+			column="id_usuario"
+			class="Usuario"
+			fetch="join"/>
+
+	</class>
+
+</hibernate-mapping>

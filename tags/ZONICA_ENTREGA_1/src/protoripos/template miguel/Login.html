@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Zónica - Login</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" type="text/css" media="all" href="css/estilos.css" />
+<!--[if IE]>
+	<link rel="stylesheet" type="text/css" media="screen" href="css/ie.css" />
+<![endif]-->
+<script type="text/javascript">
+	function validarLogin(name, password)
+	{
+		if(name.toLowerCase() == "diego" && password == "1234")
+			return true;
+		else
+		{
+			alert("El usuario ingresado no existe, o la clave no es correcta");
+			return false;
+		}
+	}
+</script>
+</head>
+<body>
+<div id="wrapper">
+	<div id="top">
+		<h1>Zónica</h1>
+		<h2>Login</h2>
+	</div>
+	<div id="menu">
+		<ul>
+			<LI><A href="Home.html" >Home</A> </LI>
+			<LI><A href="Login.html" >Ingresá</A> </LI>
+			<LI><A href="Home.html" onclick="alert('Esta funcionalidad no está implementada aún.\nFaltan sólo dos semanas !!!'); return false;">Registrate</A> </LI>
+			<LI><A href="Home.html" onclick="alert('Esta funcionalidad no está implementada aún.\nFaltan sólo dos semanas !!!'); return false;">Buscá un artista</A> </LI>
+			<LI><A href="Home.html" onclick="alert('Esta funcionalidad no está implementada aún.\nFaltan sólo dos semanas !!!'); return false;">Buscá a un amigo</A> </LI>
+		</ul>
+	</div>
+	<div id="contenido">
+		<h3>Entrá en Zónica</h3>
+		Escribí tu nombre de usuario y contraseña. 
+		<form class="login" action="MisDatos.html" onsubmit="return validarLogin(nombre.value, contrasena.value)">
+			<fieldset>
+				<legend>Logueo</legend>
+				<label>Nombre: </label><input type="text" class="nombre" id="nombre"/><br />
+				<label>Contrase&ntilde;a: </label><input type="password" class="pass" id="contrasena"/><br />
+				<input type="submit" class="submit" value="Ingresar" />
+			</fieldset>
+		</form>
+	</div>
+	<div id="pie-wrapper"></div>
+</div>
+<div id="pie">Todos los derechos reservados.</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.0"
+	namespace="Zonica.Model"
+	assembly="Zonica.Model"
+	default-access="field">
+
+	<class name="TemaMusical" table="TemaMusical">
+		<id name="id"
+			column="id"
+			unsaved-value="-1"
+			type="Int32">
+			<generator class="native"/>
+		</id>
+
+		<property
+			name="nombre"
+			column="nombre"
+			type="string"/>
+
+		<property
+			name="orden"
+			column="orden"
+			type="short"/>
+		
+		<many-to-one
+			name="album"
+			column="id_album"
+			class="Album"
+			fetch="join"/>
+
+		<many-to-one
+			name="autor"
+			column="id_autor"
+			class="Artista"
+			fetch="join"/>
+
+	</class>
+
+</hibernate-mapping>

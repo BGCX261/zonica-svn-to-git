@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.0" default-access="field">
+    <class name="Zonica.Sandbox.NHibernate.Mappings.Model.Foo, Zonica.Sandbox.NHibernate.Mappings" table="Foo">
+        <id name="id" column="id" type="Int32"> 
+            <generator class="native"/>
+        </id> 
+        <property name="nombre" column="nombre" type="String"/>
+        <one-to-one
+			name="bar"
+			class="Zonica.Sandbox.NHibernate.Mappings.Model.Bar, Zonica.Sandbox.NHibernate.Mappings"
+			cascade="all-delete-orphan"
+			fetch="join"/>
+
+    </class>
+</hibernate-mapping>

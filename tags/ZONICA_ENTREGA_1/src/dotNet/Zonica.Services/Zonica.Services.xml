@@ -1,0 +1,308 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Zonica.Services</name>
+    </assembly>
+    <members>
+        <member name="T:Zonica.Services.Service">
+            <summary>
+            Clase Base de todos los Services. Contiene los métodos que deben implementar todos
+            los Services del sistema Zónica.
+            </summary>
+        </member>
+        <member name="M:Zonica.Services.Service.#ctor">
+            <summary>
+            Constructor default.
+            </summary>
+        </member>
+        <member name="M:Zonica.Services.Service.RetrieveAll">
+            <summary>
+            Devuelve una lista con todos los objetos.
+            </summary>
+        </member>
+        <member name="M:Zonica.Services.Service.SaveOrUpdate(System.Object)">
+            <summary>
+            Guarda un objeto.
+            </summary>
+            <param name="obj">el objeto a guardar</param>
+        </member>
+        <member name="M:Zonica.Services.Service.Delete(System.Object)">
+            <summary>
+            Elimina el objeto especificado.
+            </summary>
+            <param name="obj">el objeto a eliminar</param>
+        </member>
+        <member name="M:Zonica.Services.Service.Retrieve(System.Runtime.Serialization.ISerializable)">
+            <summary>
+            Obtiene el objeto con el ID especificado.
+            </summary>
+            <param name="objectId">el ID del objeto a obtener</param>
+        </member>
+        <member name="M:Zonica.Services.EscuchaService.#ctor">
+            <summary>
+            Constructor default.
+            </summary>
+        </member>
+        <member name="M:Zonica.Services.EscuchaService.SaveOrUpdateEscucha(Zonica.Model.Escucha)">
+            
+            <param name="escucha"></param>
+        </member>
+        <member name="M:Zonica.Services.EscuchaService.RetrieveEscuchasByUsuario(Zonica.Model.Usuario)">
+            
+            <param name="usuario"></param>
+        </member>
+        <member name="M:Zonica.Services.EscuchaService.RetrieveEscuchasByUsuario(Zonica.Model.Usuario,System.DateTime,System.DateTime)">
+            
+            <param name="usuario"></param>
+            <param name="fechaHasta"></param>
+            <param name="fechaDesde"></param>
+        </member>
+        <member name="T:Zonica.Services.LocalidadService">
+            <summary>
+            Interfaz del servicio que permite acceder a los objetos de negocio <see cref="T:Zonica.Model.Pais">Pais</see>, <see cref="T:Zonica.Model.Provincia">Provincia</see> y <see cref="T:Zonica.Model.Ciudad">Ciudad</see>.
+            </summary>
+        </member>
+        <member name="M:Zonica.Services.LocalidadService.#ctor">
+            <summary>
+            Constructor default.
+            </summary>
+        </member>
+        <member name="M:Zonica.Services.LocalidadService.SaveOrUpdatePais(Zonica.Model.Pais)">
+            <summary>
+            Actualiza al objeto <see cref="T:Zonica.Model.Pais">Pais</see> especificado.
+            </summary>
+            <param name="pais">el <see cref="T:Zonica.Model.Pais">Pais</see> a guardar</param>
+        </member>
+        <member name="M:Zonica.Services.LocalidadService.RetrievePais(System.Int32)">
+            <summary>
+            Obtiene el objeto <see cref="T:Zonica.Model.Pais">Pais</see> con el Id
+            especificado del sistema Zónica.
+            </summary>
+            <param name="paisId">el Id de la <see cref="T:Zonica.Model.Pais">Pais</see> a
+            obtener</param>
+        </member>
+        <member name="M:Zonica.Services.LocalidadService.DeletePais(Zonica.Model.Pais)">
+            <summary>
+            Elimina al <see cref="T:Zonica.Model.Pais">Pais</see> especificado del sistema
+            Zónica.
+            </summary>
+            <param name="pais">el <see cref="T:Zonica.Model.Pais">Pais</see> a
+            eliminar</param>
+        </member>
+        <member name="M:Zonica.Services.LocalidadService.RetrieveAllPaises">
+            <summary>
+            Obtiene todos los objetos <see cref="T:Zonica.Model.Pais">Pais</see> del sistema
+            Zónica.
+            </summary>
+        </member>
+        <member name="M:Zonica.Services.LocalidadService.SaveOrUpdateProvincia(Zonica.Model.Provincia)">
+            <summary>
+            Actualiza al objeto <see cref="T:Zonica.Model.Provincia">Provincia</see>
+            especificado.
+            </summary>
+            <param name="provincia">la <see cref="T:Zonica.Model.Provincia">Provincia</see> a
+            guardar</param>
+        </member>
+        <member name="M:Zonica.Services.LocalidadService.SaveOrUpdateCiudad(Zonica.Model.Ciudad)">
+            <summary>
+            Actualiza al objeto <see cref="T:Zonica.Model.Ciudad">Ciudad</see> especificado.
+            </summary>
+            <param name="ciudad">la <see cref="T:Zonica.Model.Ciudad">Ciudad</see> a
+            guardar</param>
+        </member>
+        <member name="M:Zonica.Services.LocalidadService.RetrieveAllProvincias">
+            <summary>
+            Obtiene todos los objetos <see cref="T:Zonica.Model.Provincia">Provincia</see>
+            del sistema Zónica.
+            </summary>
+        </member>
+        <member name="M:Zonica.Services.LocalidadService.RetrieveAllCiudades">
+            <summary>
+            Obtiene todos los objetos <see cref="T:Zonica.Model.Ciudad">Ciudad</see> del
+            sistema Zónica.
+            </summary>
+        </member>
+        <member name="M:Zonica.Services.LocalidadService.DeleteCiudad(Zonica.Model.Ciudad)">
+            <summary>
+            Elimina al <see cref="T:Zonica.Model.Ciudad">Ciudad</see> especificado del
+            sistema Zónica.
+            </summary>
+            <param name="ciudad">la <see cref="T:Zonica.Model.Ciudad">Ciudad</see> a
+            eliminar</param>
+        </member>
+        <member name="M:Zonica.Services.LocalidadService.DeleteProvincia(Zonica.Model.Provincia)">
+            <summary>
+            Elimina al <see cref="T:Zonica.Model.Provincia">Provincia</see> especificado del
+            sistema Zónica.
+            </summary>
+            <param name="provincia">la <see cref="T:Zonica.Model.Provincia">Provincia</see> a
+            eliminar</param>
+        </member>
+        <member name="M:Zonica.Services.LocalidadService.RetrieveProvincia(System.Int32)">
+            <summary>
+            Obtiene el objeto <see cref="T:Zonica.Model.Provincia">Provincia</see> con el Id
+            especificado del sistema Zónica.
+            </summary>
+            <param name="provinciaId">el Id de la <see cref="T:Zonica.Model.Provincia">Provincia</see> a obtener</param>
+        </member>
+        <member name="M:Zonica.Services.LocalidadService.RetrieveCiudad(System.Int32)">
+            <summary>
+            Obtiene el objeto <see cref="T:Zonica.Model.Ciudad">Ciudad</see> con el Id
+            especificado del sistema Zónica.
+            </summary>
+            <param name="ciudadId">el Id de la <see cref="T:Zonica.Model.Ciudad">Ciudad</see>
+            a obtener</param>
+        </member>
+        <member name="M:Zonica.Services.LocalidadService.GetProvinciasByPais(Zonica.Model.Pais)">
+            <summary>
+            Obtiene todas los objetos <see cref="T:Zonica.Model.Provincia">Provincia</see>
+            del <see cref="T:Zonica.Model.Pais">Pais</see> especificado.
+            </summary>
+            <param name="pais">el <see cref="T:Zonica.Model.Pais">Pais</see> del cual obtener
+            los objetos <see cref="T:Zonica.Model.Provincia">Provincia</see></param>
+        </member>
+        <member name="M:Zonica.Services.LocalidadService.GetCiudadesByProvincia(Zonica.Model.Provincia)">
+            <summary>
+            Obtiene todos los objetos <see cref="T:Zonica.Model.Ciudad">Ciudad</see> de la
+            <see cref="T:Zonica.Model.Provincia">Provincia</see> especificada.
+            </summary>
+            <param name="provincia">la <see cref="T:Zonica.Model.Provincia">Provincia</see>
+            de donde obtener los objetos <see cref="T:Zonica.Model.Ciudad">Ciudad</see></param>
+        </member>
+        <member name="M:Zonica.Services.MusicaService.#ctor">
+            <summary>
+            Constructor default.
+            </summary>
+        </member>
+        <member name="M:Zonica.Services.MusicaService.RetrieveTemaMusical(System.Int32)">
+            
+            <param name="idTemaMusical"></param>
+        </member>
+        <member name="M:Zonica.Services.MusicaService.SaveOrUpdateTemaMusical(Zonica.Model.TemaMusical)">
+            
+            <param name="temaMusical"></param>
+        </member>
+        <member name="M:Zonica.Services.MusicaService.DeleteTemaMusical(Zonica.Model.TemaMusical)">
+            
+            <param name="temaMusical"></param>
+        </member>
+        <member name="M:Zonica.Services.MusicaService.RetrieveTemasMusicalesByArtista(Zonica.Model.Artista)">
+            
+            <param name="artista"></param>
+        </member>
+        <member name="M:Zonica.Services.MusicaService.RetrieveArtista(System.Int32)">
+            
+            <param name="idArtista"></param>
+        </member>
+        <member name="M:Zonica.Services.MusicaService.SaveOrUpdateArtista(Zonica.Model.Artista)">
+            
+            <param name="artista"></param>
+        </member>
+        <member name="M:Zonica.Services.MusicaService.DeleteArtista(Zonica.Model.Artista)">
+            
+            <param name="artista"></param>
+        </member>
+        <member name="M:Zonica.Services.MusicaService.RetrieveEstiloMusical(System.Int32)">
+            
+            <param name="idEstiloMusical"></param>
+        </member>
+        <member name="M:Zonica.Services.MusicaService.DeleteEstiloMusical(Zonica.Model.EstiloMusical)">
+            
+            <param name="estiloMusical"></param>
+        </member>
+        <member name="M:Zonica.Services.MusicaService.SaveOrUpdateEstiloMusical(Zonica.Model.EstiloMusical)">
+            
+            <param name="estiloMusical"></param>
+        </member>
+        <member name="M:Zonica.Services.MusicaService.SaveOrUpdateAlbum(Zonica.Model.Album)">
+            
+            <param name="album"></param>
+        </member>
+        <member name="M:Zonica.Services.MusicaService.DeleteAlbum(Zonica.Model.Album)">
+            
+            <param name="album"></param>
+        </member>
+        <member name="M:Zonica.Services.MusicaService.RetrieveAlbum(System.Int32)">
+            
+            <param name="idAlbum"></param>
+        </member>
+        <member name="M:Zonica.Services.MusicaService.RetrieveAlbumsByArtista(Zonica.Model.Artista)">
+            
+            <param name="artista"></param>
+        </member>
+        <member name="M:Zonica.Services.MusicaService.RetrieveArtistasByEstiloMusical(Zonica.Model.EstiloMusical)">
+            
+            <param name="estiloMusical"></param>
+        </member>
+        <member name="M:Zonica.Services.MusicaService.BuscarArtistas(Zonica.Model.Artista)">
+            
+            <param name="templateArtista"></param>
+        </member>
+        <member name="T:Zonica.Services.UsuarioService">
+            <summary>
+            Interfaz del Servicio del objeto de negocio <see cref="T:Zonica.Model.Usuario">Usuario</see>.
+            </summary>
+        </member>
+        <member name="F:Zonica.Services.UsuarioService.usuarioDao">
+            <summary>
+            Instancia del Dao de acceso a datos.
+            </summary>
+        </member>
+        <member name="M:Zonica.Services.UsuarioService.#ctor">
+            <summary>
+            Constructor default.
+            </summary>
+        </member>
+        <member name="M:Zonica.Services.UsuarioService.SaveOrUpdate(Zonica.Model.Usuario)">
+            <summary>
+            Actualiza al objeto <see cref="T:Zonica.Model.Usuario">Usuario</see> especificado.
+            
+            </summary>
+            <param name="usuario">el <see cref="T:Zonica.Model.Usuario">Usuario</see> a
+            guardar</param>
+        </member>
+        <member name="M:Zonica.Services.UsuarioService.Retrieve(System.Int32)">
+            <summary>
+            Obtiene el objeto <see cref="T:Zonica.Model.Usuario">Usuario</see> con el Id
+            especificado del sistema Zónica.
+            </summary>
+            <param name="usuarioId">el Id del <see cref="T:Zonica.Model.Usuario">Usuario</see> a obtener</param>
+        </member>
+        <member name="M:Zonica.Services.UsuarioService.Delete(Zonica.Model.Usuario)">
+            <summary>
+            Elimina al <see cref="T:Zonica.Model.Usuario">Usuario</see> especificado del
+            sistema Zónica.
+            </summary>
+            <param name="usuario">el <see cref="T:Zonica.Model.Usuario">Usuario</see> a
+            eliminar</param>
+        </member>
+        <member name="M:Zonica.Services.UsuarioService.AutenticarUsuario(System.String,System.String)">
+            
+            <param name="nombreUsuario"></param>
+            <param name="password"></param>
+        </member>
+        <member name="M:Zonica.Services.UsuarioService.ChangePassword(Zonica.Model.Usuario,System.String,System.String)">
+            
+            <param name="usuario"></param>
+            <param name="oldPassword"></param>
+            <param name="newPassword"></param>
+        </member>
+        <member name="M:Zonica.Services.UsuarioService.BuscarUsuarios(Zonica.Model.Usuario)">
+            
+            <param name="templateUsuario"></param>
+        </member>
+        <member name="M:Zonica.Services.UsuarioService.BuscarPorNombre(System.String)">
+            
+            <param name="nombreUsuario"></param>
+        </member>
+        <member name="M:Zonica.Services.UsuarioService.BuscarPorEscuchaMusical(Zonica.Model.Escucha)">
+            
+            <param name="templateEscuchaMusical"></param>
+        </member>
+        <member name="P:Zonica.Services.UsuarioService.UsuarioDao">
+            <summary>
+            Instancia del Dao de acceso a datos.
+            </summary>
+        </member>
+    </members>
+</doc>

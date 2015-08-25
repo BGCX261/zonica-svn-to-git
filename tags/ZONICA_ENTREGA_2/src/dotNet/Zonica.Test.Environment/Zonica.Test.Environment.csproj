@@ -1,0 +1,188 @@
+<VisualStudioProject>
+    <CSHARP
+        ProjectType = "Local"
+        ProductVersion = "7.10.3077"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{C86AE8E0-4259-4A27-8419-1FF657B0480A}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = "App.ico"
+                AssemblyKeyContainerName = ""
+                AssemblyName = "Zonica.Test.Environment"
+                AssemblyOriginatorKeyFile = ""
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "Exe"
+                PreBuildEvent = ""
+                PostBuildEvent = ""
+                RootNamespace = "Zonica.Test.Environment"
+                RunPostBuildEvent = "OnBuildSuccess"
+                StartupObject = ""
+            >
+                <Config
+                    Name = "Debug"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "DEBUG;TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "true"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "false"
+                    OutputPath = "bin\Debug\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+                <Config
+                    Name = "Release"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "false"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "true"
+                    OutputPath = "bin\Release\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                    HintPath = "..\..\..\..\..\..\..\..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.dll"
+                    Private = "False"
+                />
+                <Reference
+                    Name = "log4net"
+                    AssemblyName = "log4net"
+                    HintPath = "..\ExternalAssemblies\log4net.dll"
+                    Private = "True"
+                />
+                <Reference
+                    Name = "NHibernate"
+                    AssemblyName = "NHibernate"
+                    HintPath = "..\ExternalAssemblies\NHibernate.dll"
+                    Private = "True"
+                />
+                <Reference
+                    Name = "Zonica.Interfaces"
+                    Project = "{8F04BD48-3232-48D8-AE07-F452AE7E96C7}"
+                    Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
+                    Private = "True"
+                />
+                <Reference
+                    Name = "Zonica.Model"
+                    Project = "{6136FCA3-F73B-428E-A32F-8AC0EEE10A81}"
+                    Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
+                    Private = "True"
+                />
+                <Reference
+                    Name = "Zonica.Framework"
+                    Project = "{C7991ACC-8B86-4E25-86C3-BC2D8A2EB129}"
+                    Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
+                    Private = "True"
+                />
+                <Reference
+                    Name = "Zonica.DAO"
+                    Project = "{E256825E-3D57-4CDC-A644-21241EB9E6F7}"
+                    Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
+                />
+                <Reference
+                    Name = "Iesi.Collections"
+                    AssemblyName = "Iesi.Collections"
+                    HintPath = "..\ExternalAssemblies\Iesi.Collections.dll"
+                />
+                <Reference
+                    Name = "Spring.Web"
+                    AssemblyName = "Spring.Web"
+                    HintPath = "..\ExternalAssemblies\Spring.Web.dll"
+                />
+                <Reference
+                    Name = "antlr.runtime"
+                    AssemblyName = "antlr.runtime"
+                    HintPath = "..\ExternalAssemblies\antlr.runtime.dll"
+                />
+                <Reference
+                    Name = "Castle.DynamicProxy"
+                    AssemblyName = "Castle.DynamicProxy"
+                    HintPath = "..\ExternalAssemblies\Castle.DynamicProxy.dll"
+                />
+                <Reference
+                    Name = "Spring.Aop"
+                    AssemblyName = "Spring.Aop"
+                    HintPath = "..\ExternalAssemblies\Spring.Aop.dll"
+                />
+                <Reference
+                    Name = "Spring.Core"
+                    AssemblyName = "Spring.Core"
+                    HintPath = "..\ExternalAssemblies\Spring.Core.dll"
+                />
+                <Reference
+                    Name = "Spring.Data"
+                    AssemblyName = "Spring.Data"
+                    HintPath = "..\ExternalAssemblies\Spring.Data.dll"
+                />
+                <Reference
+                    Name = "Spring.Data.NHibernate"
+                    AssemblyName = "Spring.Data.NHibernate"
+                    HintPath = "..\ExternalAssemblies\Spring.Data.NHibernate.dll"
+                />
+                <Reference
+                    Name = "Spring.Services"
+                    AssemblyName = "Spring.Services"
+                    HintPath = "..\ExternalAssemblies\Spring.Services.dll"
+                />
+                <Reference
+                    Name = "Zonica.Services"
+                    Project = "{C605D4B8-FB62-4DC7-B80A-02E46C16D00D}"
+                    Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
+                />
+            </References>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "App.config"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "App.ico"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "AssemblyInfo.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SpringTest.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Zonica.hibernate.cfg.xml"
+                    BuildAction = "EmbeddedResource"
+                />
+            </Include>
+        </Files>
+    </CSHARP>
+</VisualStudioProject>
+

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.0"
+	namespace="Zonica.Model"
+	assembly="Zonica.Model"
+	default-access="field">
+	
+	<!-- Mapeo virtual de una clase para poder usarla en consultas HQL -->
+	<class name="ItemRanking">
+		<id name="id" type="Int32">
+			<generator class="assigned"/>
+		</id>
+		<property name="nombre" type="string"/>
+		<property name="valoracion" type="Int32"/>
+	</class>
+	
+	<sql-query name="artistasMasEscuchados">
+		<return alias="itemRanking" class="Zonica.Model.ItemRanking, Zonica.Model" />
+		SELECT TOP 10
+			COUNT(e.id_temaMusical) AS {itemRanking.valoracion},
+			ar.Id AS {itemRanking.id},
+			ar.Nombre AS {itemRanking.nombre}
+		FROM
+			Zonica.dbo.Escucha e,
+			Zonica.dbo.Artista ar,
+			Zonica.dbo.Album al,
+			Zonica.dbo.TemaMusical tm
+		WHERE
+			e.id_temaMusical = tm.id
+			AND tm.id_album = al.id
+			AND al.id_artista = ar.id
+			AND :idUsuario = :idUsuario
+		GROUP BY
+		    ar.Id,
+			ar.Nombre
+		ORDER BY
+			COUNT(e.id_temaMusical) DESC,
+			ar.Nombre ASC
+	</sql-query>
+
+	<sql-query name="temasMusicalesMasEscuchados">
+		<return alias="itemRanking" class="Zonica.Model.ItemRanking, Zonica.Model" />
+		SELECT TOP 10
+			COUNT(e.id_temaMusical) AS {itemRanking.valoracion},
+			tm.Id AS {itemRanking.id},
+			tm.Nombre + ' (' + ar.Nombre + ')' AS {itemRanking.nombre}
+		FROM
+			Zonica.dbo.Escucha e,
+			Zonica.dbo.Artista ar,
+			Zonica.dbo.Album al,
+			Zonica.dbo.TemaMusical tm
+		WHERE
+			e.id_temaMusical = tm.id
+			AND tm.id_album = al.id
+			AND al.id_artista = ar.id
+			AND :idUsuario = :idUsuario
+		GROUP BY
+			tm.Id,
+			tm.Nombre,
+			ar.Nombre
+		ORDER BY
+			COUNT(e.id_temaMusical) DESC,
+			tm.Nombre ASC
+	</sql-query>
+
+	<sql-query name="albumesMasEscuchados">
+		<return alias="itemRanking" class="Zonica.Model.ItemRanking, Zonica.Model" />
+		SELECT TOP 10
+			COUNT(e.id_temaMusical) AS {itemRanking.valoracion},
+			al.Id AS {itemRanking.id},
+			al.Nombre + ' (' + ar.Nombre + ')' AS {itemRanking.nombre}
+		FROM
+			Zonica.dbo.Escucha e,
+			Zonica.dbo.Artista ar,
+			Zonica.dbo.Album al,
+			Zonica.dbo.TemaMusical tm
+		WHERE
+			e.id_temaMusical = tm.id
+			AND tm.id_album = al.id
+			AND al.id_artista = ar.id
+			AND :idUsuario = :idUsuario
+		GROUP BY
+			al.Id,
+			al.Nombre,
+			ar.Nombre
+		ORDER BY
+			COUNT(e.id_temaMusical) DESC,
+			al.Nombre ASC
+	</sql-query>
+
+	<sql-query name="artistasMasEscuchadosPorUsuario">
+		<return alias="itemRanking" class="Zonica.Model.ItemRanking, Zonica.Model" />
+		SELECT TOP 10
+			COUNT(e.id_temaMusical) AS {itemRanking.valoracion},
+			ar.Id AS {itemRanking.id},
+			ar.Nombre AS {itemRanking.nombre}
+		FROM
+			Zonica.dbo.Escucha e,
+			Zonica.dbo.Artista ar,
+			Zonica.dbo.Album al,
+			Zonica.dbo.TemaMusical tm
+		WHERE
+			e.id_temaMusical = tm.id
+			AND tm.id_album = al.id
+			AND al.id_artista = ar.id
+			AND e.id_Usuario = :idUsuario
+		GROUP BY
+		    ar.Id,
+			ar.Nombre
+		ORDER BY
+			COUNT(e.id_temaMusical) DESC,
+			ar.Nombre ASC
+	</sql-query>
+
+	<sql-query name="temasMusicalesMasEscuchadosPorUsuario">
+		<return alias="itemRanking" class="Zonica.Model.ItemRanking, Zonica.Model" />
+		SELECT TOP 10
+			COUNT(e.id_temaMusical) AS {itemRanking.valoracion},
+			tm.Id AS {itemRanking.id},
+			tm.Nombre + ' (' + ar.Nombre + ')' AS {itemRanking.nombre}
+		FROM
+			Zonica.dbo.Escucha e,
+			Zonica.dbo.Artista ar,
+			Zonica.dbo.Album al,
+			Zonica.dbo.TemaMusical tm
+		WHERE
+			e.id_temaMusical = tm.id
+			AND tm.id_album = al.id
+			AND al.id_artista = ar.id
+			AND e.id_Usuario = :idUsuario
+		GROUP BY
+			tm.Id,
+			tm.Nombre,
+			ar.Nombre
+		ORDER BY
+			COUNT(e.id_temaMusical) DESC,
+			tm.Nombre ASC
+	</sql-query>
+
+	<sql-query name="albumesMasEscuchadosPorUsuario">
+		<return alias="itemRanking" class="Zonica.Model.ItemRanking, Zonica.Model" />
+		SELECT TOP 10
+			COUNT(e.id_temaMusical) AS {itemRanking.valoracion},
+			al.Id AS {itemRanking.id},
+			al.Nombre + ' (' + ar.Nombre + ')' AS {itemRanking.nombre}
+		FROM
+			Zonica.dbo.Escucha e,
+			Zonica.dbo.Artista ar,
+			Zonica.dbo.Album al,
+			Zonica.dbo.TemaMusical tm
+		WHERE
+			e.id_temaMusical = tm.id
+			AND tm.id_album = al.id
+			AND al.id_artista = ar.id
+			AND e.id_Usuario = :idUsuario
+		GROUP BY
+			al.Id,
+			al.Nombre,
+			ar.Nombre
+		ORDER BY
+			COUNT(e.id_temaMusical) DESC,
+			al.Nombre ASC
+	</sql-query>
+
+	<sql-query name="usuariosMasActivos">
+		<return alias="itemRanking" class="Zonica.Model.ItemRanking, Zonica.Model" />
+		SELECT
+			COUNT(e.id_temaMusical) AS {itemRanking.valoracion},
+			u.Id AS {itemRanking.id},
+			ISNULL(u.Apodo, u.NombreUsuario) AS {itemRanking.nombre}
+		FROM
+			Escucha e,
+			Usuario u
+		WHERE
+			e.id_Usuario = u.id
+			AND :idUsuario = :idUsuario
+		GROUP BY
+			u.Id,
+			u.Apodo,
+			u.NombreUsuario
+		ORDER BY
+			COUNT(e.id_temaMusical) DESC,
+			u.Apodo ASC
+	</sql-query>
+	
+	<sql-query name="usuariosMasActivosPorArtista">
+		<return alias="itemRanking" class="Zonica.Model.ItemRanking, Zonica.Model" />
+		SELECT
+			COUNT(e.id_temaMusical) AS {itemRanking.valoracion},
+			u.Id AS {itemRanking.id},
+			ISNULL(u.Apodo, u.NombreUsuario) AS {itemRanking.nombre}
+		FROM
+			Escucha e,
+			TemaMusical tm,
+			Album al,
+			Usuario u
+		WHERE
+			e.id_Usuario = u.id
+			AND e.id_temaMusical = tm.id
+			AND tm.id_album = al.id
+			AND al.id_artista = :idArtista
+		GROUP BY
+			u.Id,
+			u.Apodo,
+			u.NombreUsuario
+		ORDER BY
+			COUNT(e.id_temaMusical) DESC,
+			u.Apodo ASC
+	</sql-query>
+	
+	<sql-query name="albumesMasEscuchadosPorArtista">
+		<return alias="itemRanking" class="Zonica.Model.ItemRanking, Zonica.Model" />
+		SELECT
+			COUNT(e.id_temaMusical) AS {itemRanking.valoracion},
+			al.Id AS {itemRanking.id},
+			al.Nombre AS {itemRanking.nombre}
+		FROM
+			Zonica.dbo.Escucha e,
+			Zonica.dbo.Artista ar,
+			Zonica.dbo.Album al,
+			Zonica.dbo.TemaMusical tm
+		WHERE
+			e.id_temaMusical = tm.id
+			AND tm.id_album = al.id
+			AND al.id_artista = ar.id
+			AND al.id_artista = :idArtista
+		GROUP BY
+			al.Id,
+			al.Nombre,
+			ar.Nombre
+		ORDER BY
+			COUNT(e.id_temaMusical) DESC,
+			al.Nombre ASC
+	</sql-query>
+	
+	<sql-query name="temasMusicalesMasEscuchadosPorArtista">
+		<return alias="itemRanking" class="Zonica.Model.ItemRanking, Zonica.Model" />
+		SELECT
+			COUNT(e.id_temaMusical) AS {itemRanking.valoracion},
+			tm.Id AS {itemRanking.id},
+			tm.Nombre + ' (' + al.Nombre + ')' AS {itemRanking.nombre}
+		FROM
+			Zonica.dbo.Escucha e,
+			Zonica.dbo.Album al,
+			Zonica.dbo.TemaMusical tm
+		WHERE
+			e.id_temaMusical = tm.id
+			AND tm.id_album = al.id
+			AND al.id_artista = :idArtista
+		GROUP BY
+			tm.Id,
+			tm.Nombre,
+			al.Nombre
+		ORDER BY
+			COUNT(e.id_temaMusical) DESC,
+			tm.Nombre ASC
+	</sql-query>
+	
+</hibernate-mapping>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.0"
+	namespace="Zonica.Model"
+	assembly="Zonica.Model"
+	default-access="field">
+
+	<class name="Usuario" table="Usuario">
+		<id name="id"
+			column="id"
+			unsaved-value="-1"
+			type="Int32">
+			<generator class="native"/>
+		</id>
+
+		<property
+			name="nombre"
+			column="nombreUsuario"
+			type="string"/>
+
+		<property
+			name="password"
+			column="password"
+			type="string"/>
+
+		<one-to-one
+			name="perfilUsuario"
+			class="PerfilUsuario"
+			/>
+
+	</class>
+
+</hibernate-mapping>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.0"
+	namespace="Zonica.Model"
+	assembly="Zonica.Model"
+	default-access="field">
+
+	<class name="PerfilUsuario" table="PerfilUsuario">
+		<id name="id"
+			column="id"
+			unsaved-value="-1"
+			type="Int32">
+			<generator class="native"/>
+		</id>
+
+		<property
+			name="nombreCompleto"
+			column="nombreCompleto"
+			type="string"/>
+
+		<property
+			name="apodo"
+			column="apodo"
+			type="string"/>
+
+		<property
+			name="fechaCreacion"
+			column="fechaCreacion"
+			type="DateTime"/>
+
+		<property
+			name="fechaActualizacion"
+			column="fechaActualizacion"
+			type="DateTime"/>
+
+		<property
+			name="fechaNacimiento"
+			column="fechaNacimiento"
+			type="DateTime"/>
+
+		<many-to-one
+			name="usuario"
+			class="Usuario"
+			column="id_usuario"/>
+
+		<bag name="escuchas" table="Escucha" inverse="true" lazy="true">
+			<key column="id_perfilUsuario"/>
+			<one-to-many class="Escucha"/>
+		</bag>
+
+	</class>
+
+</hibernate-mapping>

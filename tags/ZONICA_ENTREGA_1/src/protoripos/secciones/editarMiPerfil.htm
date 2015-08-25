@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+		<base target="contents">
+		<link href="styles/styles.css">
+	</head>
+	<body topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0">
+		<TABLE id="tablaPrincipal" border="0" width="100%">
+			<TR>
+				<TD align="right">
+					Bienvenido usuario1
+				</TD>
+			</TR>
+			<TR>
+				<TD>
+					<form id="form1" method="post" target="_self">
+						<TABLE id="tablaContenidoPerfil" border="0" width="100%">
+							<TR>
+								<TD colspan="2"><b>Datos del usuario: usuario1</b></TD>
+							</TR>
+							<TR>
+								<TD>Nombre:</TD>
+								<TD>
+									<input type="text" id="txtNombre" value="Nombre de usuario1" />
+								</TD>
+							</TR>
+							<TR>
+								<TD>Login:</TD>
+								<TD>
+									<input type="text" id="txtLogin" value="usuario1" readonly="true" />
+								</TD>
+							</TR>
+							<TR>
+								<TD>Password actual:</TD>
+								<TD>
+									<input type="password" id="txtPasswordActual" />
+								</TD>
+							</TR>
+							<TR>
+								<TD>Nuevo Password:</TD>
+								<TD>
+									<input type="password" id="txtPasswordNuevo" />
+								</TD>
+							</TR>
+							<TR>
+								<TD>Repetí el nuevoPassword:</TD>
+								<TD>
+									<input type="password" id="txtConfirmaPasswordNuevo" />
+								</TD>
+							</TR>
+							<TR>
+								<TD>Fecha de nacimiento:</TD>
+								<TD>
+									<input type="text" id="txtFechaNacimiento" value="dd/MM/yyyy"/>
+								</TD>
+							</TR>
+							<TR>
+								<TD>Direcci&oacute;n de e-mail:</TD>
+								<TD>
+									<input type="text" id="txtEmail" value="someone@example.com"/>
+								</TD>
+							</TR>
+							<TR>
+								<TD>Direcci&oacute;n:</TD>
+								<TD>
+									<TABLE id="tablaDireccion" border="0" width="100%">
+										<TR>
+											<TD>Calle</TD>
+											<TD>
+												<input type="text" id="txtCalle" value="Una Calle" />
+											</TD>
+										</TR>
+										<TR>
+											<TD>Altura</TD>
+											<TD>
+												<input type="text" id="txtAltura" value="1234" />
+											</TD>
+										</TR>
+										<TR>
+											<TD>Ciudad</TD>
+											<TD>
+												<select id="ddlCiudad">
+													<option>Lomas de Zamora</option>
+												</select>
+											</TD>
+										</TR>
+										<TR>
+											<TD>Provincia</TD>
+											<TD>
+												<select id="ddlProvincia">
+													<option>Buenos Aires</option>
+												</select>
+											</TD>
+										</TR>
+									</TABLE>
+								</TD>
+							</TR>
+							<TR>
+								<TD>Artista favorito</TD>
+								<TD>
+									<select id="ddlArtistaFavorito">
+										<option>Piola vago</option>
+									</select>
+								</TD>
+							</TR>
+							<TR>
+								<TD>Estilo musical preferido</TD>
+								<TD>
+									<select id="ddlEstiloPreferido">
+										<option>Cumbia Villera</option>
+									</select>
+								</TD>
+							</TR>
+							<TR>
+								<TD>&nbsp;</TD>
+								<TD>
+									<input type="submit" id="btnGuardar" value="Guardar" onclick="window.location.href='verMiPerfil.htm'"/>
+									<input type="button" id="btnCalcelar" value="Cancelar" onclick="window.location.href='verMiPerfil.htm'"/>
+								</TD>
+							</TR>
+						</TABLE>
+					</form>
+				</TD>
+			</TR>
+			<TR>
+				<TD>&nbsp;</TD>
+			</TR>
+		</TABLE>
+	</body>
+</html>

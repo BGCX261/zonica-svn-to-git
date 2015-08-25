@@ -1,0 +1,1 @@
+rem gacutil.exe /i Zonica.Services.dll

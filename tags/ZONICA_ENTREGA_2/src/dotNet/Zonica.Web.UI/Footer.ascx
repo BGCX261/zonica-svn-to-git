@@ -1,0 +1,2 @@
+<%@ Control Language="c#" AutoEventWireup="false" Codebehind="Footer.ascx.cs" Inherits="Zonica.Web.UI.Footer" TargetSchema="http://schemas.microsoft.com/intellisense/ie5"%>
+<div id="pie">Todos los derechos reservados.</div>

@@ -1,0 +1,308 @@
+html { 
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	margin: 0;
+	font-size:62.5%;
+	font-family: Arial, sans-serif;
+	background-color: #F9F9F9;
+	text-align: center;
+	color: #565656;
+}
+
+/* ============ TAGS GLOBALES ============ */
+
+img {
+	border: 0px;
+}
+
+ul, ol, li, dl, dt, dd {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+a { text-decoration: none; }
+
+h1,h2,h3,h4,h5,h6 {
+	padding: 0;
+	margin: 0;
+}
+
+form,fieldset,label,input {
+	padding: 0;
+	margin: 0;
+}
+
+fieldset {border: 0;}
+
+p {margin: 1em 0;}
+
+.hidden {display: none;}
+
+.clear {clear: both;}
+
+
+/* ============ ORGANIZACION ESTRUCTURAL ============ */
+
+#wrapper {
+	background: #fff url(../images/wrapper-fondo.png) repeat-y;
+	width: 750px;
+	margin: 15px auto;
+	text-align: left;
+	overflow: hidden;
+}
+	#top {
+		width: 750px;
+		background: url(../images/top-header.png) no-repeat;
+		height: 58px;
+		overflow: hidden;
+	}
+	h1 {
+		font-size: 2em;
+		color: #fff;
+		float: left;
+		margin: 1.1em 0 0 1em;
+	}
+	h2 {
+		font-size: 1.6em;
+		color: #fff;
+		float: right;
+		margin: 1.6em 2em 0 0;
+	}
+	
+	h3
+	{
+		font-size:1.4em;
+	}
+	
+	h4 
+	{
+		font-size: 1.3em;
+	} 
+	
+	#menu {
+		float: left;
+		margin: 10px 0 0 10px;
+	}
+		#menu li {
+			display: block;
+			width: 156px;
+			height: 36px;
+			background: url(../images/boton-fondo.png) no-repeat;
+			overflow: hidden;
+		}
+			#menu li a {
+				display: block;
+				width: 156px;
+				height: 36px;
+				line-height: 36px;
+				text-align: center;
+				color: #fff;
+				background: url(../images/boton-fondo.png) no-repeat;
+				font-weight: bold;
+				font-size: 1.3em;
+			}
+				#menu li a:hover {
+					background-position: 0 -36px;
+					color: #000;
+				}
+	#contenido {
+		float: left;
+		overflow: hidden;
+		width: 550px;
+		border-left: 1px solid #ccc;
+		margin: 10px 0 0 10px;
+		padding: 0 10px;
+		font-size: 1.2em;
+		font-family: "Trebuchet MS", sans-serif;
+	}
+		#contenido h3 {
+			font-size: 1.33em;
+			color: #fff;
+			background-color: #959595;
+			padding: 2px 5px;
+			margin: 0 0 0.6em 0;
+			font-family: Arial, sans-serif;
+		}
+		#contenido a {	text-decoration: underline;	color: #565656; }
+		#contenido a:hover {background-color: #565656;  color: #fff;}
+		#contenido .error { color:#f00 }
+		#contenido .errorSummary
+		{
+			margin-top:10px;
+			CLEAR: both;
+		}
+		#contenido .footer
+		{
+			text-align:right;
+		}
+		#contenido .footer .submit
+		{
+			padding: 2px;
+			margin: 5px auto 0 auto;
+			width: 70px;
+		}
+		.smallForm 
+		{
+		}
+			.smallForm fieldset 
+			{
+				background-color: #F9F9F9;
+				border: 3px solid #ccc;
+				padding: 1em;
+				width: 285px;
+				margin: 1em auto;
+				overflow: hidden;
+				clear: both;
+			}
+			
+			.smallForm legend {display: none;}
+			.smallForm label {
+				font-weight: bold;
+				display: block;
+				float: left;
+				width: 80px;
+				clear: left;
+				padding-top: 3px;
+			}
+			
+			.smallForm label.newLinelabel 
+			{
+				display: block;
+				float: none;
+				width: auto;
+				clear:none;
+				padding-bottom: 3px;
+			}
+			
+			.smallForm .textField{
+				margin: 0 0 0.5em 0;
+				padding: 2px;
+				width: 170px;
+			}
+			.smallForm .bigTextField{
+				width: 100%;
+			}
+			.smallForm .readOnlyField
+			{
+				display:block;
+				margin-bottom: 0.5em;
+				padding: 2px;
+				width: 150px;
+				border-width:1px;
+				border-style:solid;
+				background-color:white;
+			}
+			.smallForm .submit {
+				padding: 2px;
+				margin: 5px auto 0 auto;
+			}
+			.smallForm .centerContent	/*esta clase (centerContent) es necesaria porque el doctype de login es el unico que pone el fieldset centrado y el resto del contenido alineado a izquierda. habria que ver como hacer para reproducir ese comportamiento en el doctype que estan usando la mayoria de las paginas*/
+			{
+				text-align:center;
+			}
+			.smallForm .centerContent fieldset,h3
+			{
+				text-align:left;
+			}
+	
+	img.screenshot
+		{
+			height: 100px;
+			width: 200px;
+			display: block;
+		}
+		
+	.rating
+		{
+			margin: 0 5px 5px 0;
+			border:2px solid #565;
+			padding:5px 10px;
+			width:230px;
+			height:300px;
+			float: left;
+			vertical-align:top;
+			font-size:1.3em;
+		}
+		
+		.rating h4
+		{
+			font-size:1em;
+		}
+		
+		.rating div
+		{
+			height:250px;
+			overflow-y: auto;
+		}
+		.rating a
+		{
+			width:100%;
+			display: block;
+		}
+		
+		.rating td
+		{
+			text-decoration:underline;
+		}
+		.rating table
+		{
+			width:210px;
+		}
+
+	.displayGrid
+	{
+		margin-top: 10px;
+		border: 1px solid #ccc;
+		width:100%;
+	}
+		.displayGrid td
+		{
+			width:280px;
+			padding:0px 2px 0px 2px;
+			border-color: #ccc;
+		}
+		
+		.displayGrid .head
+		{
+			font-weight:bold;
+			background-color: #F0F0F0;
+		}
+		
+		.displayGrid .alternate
+		{
+			background-color: #F9F9F9;
+		}
+		
+		.displayGrid .detailsHeader
+		{
+			width:16px;	
+		} 
+		.displayGrid .details 
+		{
+			width:16px;
+		}
+		.displayGrid img
+		{
+			background-color:White;
+		}
+		.displayGrid a
+		{
+			height:14px;
+			width:14px;
+			display:block;
+		}
+		
+	#pie-wrapper {
+		clear: both;
+		height: 20px;
+		background: url(../images/pie.png) no-repeat 0 bottom;
+	}
+	
+	#pie {
+		font-family: "Trebuchet MS", sans-serif;
+		font-size: 1.1em;
+	}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.0"
+	namespace="Zonica.Model"
+	assembly="Zonica.Model"
+	default-access="field">
+
+	<class name="Usuario" table="Usuario">
+		<id name="id"
+			column="id"
+			unsaved-value="-1"
+			type="Int32">
+			<generator class="native"/>
+		</id>
+
+		<property
+			name="nombre"
+			column="nombreUsuario"
+			type="string"/>
+
+		<property
+			name="password"
+			column="password"
+			type="string"/>
+
+		<property
+			name="nombreCompleto"
+			column="nombreCompleto"
+			type="string"/>
+
+		<property
+			name="apodo"
+			column="apodo"
+			type="string"/>
+
+		<property
+			name="fechaCreacion"
+			column="fechaCreacion"
+			type="DateTime"/>
+
+		<property
+			name="fechaActualizacion"
+			column="fechaActualizacion"
+			type="DateTime"/>
+
+		<property
+			name="fechaNacimiento"
+			column="fechaNacimiento"
+			type="DateTime"/>
+			
+		<many-to-one name="ciudad"
+			column="id_ciudad"
+			class="Ciudad"
+			fetch="join"/>
+
+		<set name="escuchas" table="Escucha" inverse="true" lazy="true">
+			<key column="id_usuario"/>
+			<one-to-many class="Escucha"/>
+		</set>
+
+		<set name="contactos" table="ContactoUsuario" inverse="true" cascade="all-delete-orphan">
+			<key column="id_usuario"/>
+			<one-to-many class="ContactoUsuario"/>
+		</set>
+
+	</class>
+
+</hibernate-mapping>

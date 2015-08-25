@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.0"
+	namespace="Zonica.Model"
+	assembly="Zonica.Model"
+	default-access="field">
+
+	<class name="Album" table="Album">
+		<id name="id"
+			column="id"
+			unsaved-value="-1"
+			type="Int32">
+			<generator class="native" />
+		</id>
+
+		<property
+			name="nombre"
+			column="nombre"
+			type="string"/>
+
+		<property
+			name="anioPublicacion"
+			column="anioPublicacion"
+			type="Int32"/>
+
+		<many-to-one
+			name="artista"
+			column="id_artista"
+			class="Artista"
+			fetch="join"/>
+
+		<set name="temasMusicales" table="TemaMusical" inverse="true" lazy="true">
+			<key column="id_album"/>
+			<one-to-many class="TemaMusical"/>
+		</set>
+
+	</class>
+
+</hibernate-mapping>

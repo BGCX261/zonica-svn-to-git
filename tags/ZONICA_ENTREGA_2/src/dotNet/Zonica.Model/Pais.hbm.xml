@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.0"
+	namespace="Zonica.Model"
+	assembly="Zonica.Model"
+	default-access="field">
+
+	<class name="Pais" table="Pais">
+		<id name="id"
+			column="id"
+			unsaved-value="-1"
+			type="Int32">
+			<generator class="native" />
+		</id>
+
+		<property
+			name="nombre"
+			column="nombre"
+			type="string"
+		/>
+
+		<set name="provincias" table="Provincia" inverse="true" lazy="true">
+			<key column="id_pais"/>
+			<one-to-many class="Provincia"/>
+		</set>
+
+	</class>
+
+</hibernate-mapping>
